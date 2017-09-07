@@ -15,9 +15,7 @@ class String
   end
 
   def count_sentences
-    self.include?(".") ? sentence_count = self.split(".").length : sentence_count = 0
-    self.include?("!") ? exclamation_count = self.split("!").length : exclamation_count = 0
-    self.include?("?") ? question_count = self.split("?").length : question_count = 0
+    self.split(/[.?!]+/).count
 
     total = sentence_count + exclamation_count + question_count
 
