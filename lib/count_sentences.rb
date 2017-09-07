@@ -15,6 +15,12 @@ class String
   end
 
   def count_sentences
-    self.count "!?."
+    sentence_count = self.split(".").length
+    exclamation_count = self.split("!").length
+    question_count = self.split("?").length
+
+    total = sentence_count + exclamation_count + question_count
+
+    total
   end
 end
